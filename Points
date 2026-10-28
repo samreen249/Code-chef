@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 Scanner sc = new Scanner(System.in);
+
+        // Read the four integers
+        int X = sc.nextInt(); // Alice's primary
+        int Y = sc.nextInt(); // Alice's secondary
+        int A = sc.nextInt(); // Bob's primary
+        int B = sc.nextInt(); // Bob's secondary
+
+        // Logic to determine the winner
+        if (X > A) {
+            System.out.println("Alice");
+        } else if (A > X) {
+            System.out.println("Bob");
+        } else {
+            // Primary scores are equal, check secondary scores
+            if (Y >= B) {
+                System.out.println("Alice");
+            } else {
+                System.out.println("Bob");
+            }
+        }
+        
+        sc.close();
+    }
+}
